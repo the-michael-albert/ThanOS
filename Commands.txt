@@ -16,3 +16,25 @@ create the java
 tce-load -wi openjdk-8-jre
 alias java='/usr/local/openjdk-8/jre/bin/java'
 alias install='tce-load'
+
+
+===========================================
+
+create the ssh server
+
+
+tce-load -wi openssh OR 
+tce-load -i /applications/openssh.tcz
+sudo cp /usr/local/etc/ssh/ssh_config.orig /usr/local/etc/ssh/ssh_config
+sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
+sudo /usr/local/etc/init.d/openssh start
+
+===========================================
+
+install nano
+
+
+tce-load -wi nano OR 
+tce-load -i /applications/nano.tcz
+
+===========================================
