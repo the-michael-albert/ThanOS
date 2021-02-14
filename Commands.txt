@@ -1,0 +1,18 @@
+# turns current folder into a cpio file
+find . -print -depth | cpio -oLv > test.cpio
+
+# turns test file into a gz file
+gzip -k core.cpio
+
+
+#turns a folder into an iso
+mkisofs -o ./out.iso /directory/
+
+
+
+===========================================
+
+create the java
+tce-load -wi openjdk-8-jre
+alias java='/usr/local/openjdk-8/jre/bin/java'
+alias install='tce-load'
