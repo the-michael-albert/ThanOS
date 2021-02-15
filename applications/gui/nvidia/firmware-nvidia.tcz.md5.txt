@@ -1,0 +1,1 @@
+350c3740a137d63583fc773d80905d5e  firmware-nvidia.tcz

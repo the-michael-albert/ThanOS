@@ -1,0 +1,1 @@
+ef91a48887b1b2be96f94a78bd45cfc8  i2c-5.4.3-tinycore.tcz
