@@ -1,0 +1,51 @@
+# ~/.ashrc: Executed by SHells.
+#
+. /etc/init.d/tc-functions
+if [ -n "$DISPLAY" ]
+then
+	`which editor >/dev/null` && EDITOR=editor || EDITOR=vi
+else
+	EDITOR=vi
+fi
+export EDITOR
+
+# Alias definitions.
+#
+alias df='df -h'
+alias du='du -h'
+
+alias ls='ls -p'
+alias ll='ls -l'
+alias la='ls -la'
+
+# Avoid errors... use -f to skip confirmation.
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+alias ce='cd /etc/sysconfig/tcedir'
+
+#load nano
+tce-load -i /applications/nano/*
+
+#load ssh
+tce-load -i /applications/ssh/*
+sudo cp /usr/local/etc/ssh/ssh_config.orig /usr/local/etc/ssh/ssh_config
+sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
+sudo /usr/local/etc/init.d/openssh start
+
+#load java
+tce-load -i /applications/java/*
+alias java="/usr/local/openjdk-8/jre/bin/java"
+
+#java -jar /applications/jars/Desktop.jar
+
+#install python (yuck)
+tce-load -i /applications/python3.6/*
+
+#install dedicated graphics firmware and monitor-sensing firmware
+tce-load -i /applications/graphics-all/*
+
+echo "Set Password"
+sudo passwd tc
+
