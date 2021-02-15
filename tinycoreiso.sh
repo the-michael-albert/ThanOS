@@ -40,7 +40,7 @@ fi
 
 INPUT="$1"
 OUTPUT="$2"
-NAME='TC-custom'
+NAME='THAN-OS'
 
 echo 'Extracting...'
 mkdir mnt iso root

@@ -1,11 +1,12 @@
 http://forum.tinycorelinux.net/index.php?topic=20873.0
+tce-load -wi graphics-5.4.3-tinycore
 tce-load -wi Xvesa.tcz Xlibs.tcz Xprogs.tcz aterm.tcz flwm_topside.tcz wbar.tcz
 
 ^trash
 
 tce-load -wi graphics-5.4.3-tinycore
 tce-load -wi Xorg-7.7-3d
-tce-load -wi gnome-desktop
+tce-load -wi Xorg-7.7-3d
 
 http://forum.tinycorelinux.net/index.php?topic=22937.0
 $ xdg-user-dirs-update
@@ -14,11 +15,3 @@ $ sudo /usr/local/etc/init.d/networkmanager start
 $ sudo /usr/local/lib/elogind/elogind --daemon
 $ su - tc
 $ gnome-session
-
-
-
-SOLID SHOT
-
-tce-load -wi graphics-5.4.3-tinycore
-tce-load -wi firmware-nvidia
-tce-load -wi firmware-radeon
