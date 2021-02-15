@@ -1,0 +1,33 @@
+1. Add the following to /boot/isolinux and /etc/motd
+
+
+-- START --
+    ______   __  __     ______     __   ___     ______     ______    
+   /\__  _\ /\ \_\ \   /\  __ \   /\ "-.\  \   /\  __ \   /\  ___\   
+   \/_/\ \/ \ \  __ \  \ \  __ \  \ \ \-.,  \  \ \ \/\ \  \ \___  \  
+      \ \_\  \ \_\ \_\  \ \_\ \_\  \ \_\ \"\_\  \ \_____\  \/\_____\ 
+       \/_/   \/_/\/_/   \/_/\/_/   \/_/  \/_/   \/_____/   \/_____/ 
+
+--  END  --
+	
+
+2. add all the applications '*.tczs' to /applications/
+
+3. copy the 'tczs' folders into /applications
+
+4. add the following commands to the /etc/skel/.ashrc
+
+-- START --
+
+tce-load -i /applications/nano.tcz
+
+tce-load -i /applications/openssh.tcz
+sudo cp /usr/local/etc/ssh/ssh_config.orig /usr/local/etc/ssh/ssh_config
+sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
+sudo /usr/local/etc/init.d/openssh start
+
+tce-load -i /applications/java/*
+alias java="/usr/local/openjdk-8/jre/bin/java"
+
+
+--  END  --
