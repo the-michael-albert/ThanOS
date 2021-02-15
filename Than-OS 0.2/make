@@ -33,3 +33,9 @@ tce-load -i /applications/java/*
 alias java="/usr/local/openjdk-8/jre/bin/java"
 
 --  END  --
+
+5. start the CUI 
+
+-- START --
+java -jar /applications/jars/Desktop.jar
+--  END  --
