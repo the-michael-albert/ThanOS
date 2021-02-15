@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DesktopPackage:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DesktopPackage_jar</output-path>
+    <root id="archive" name="DesktopPackage.jar">
+      <element id="module-output" name="DesktopPackage" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../dependencies/lanterna-3.2.0-alpha1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
