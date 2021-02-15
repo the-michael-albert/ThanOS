@@ -19,15 +19,17 @@
 
 -- START --
 
-tce-load -i /applications/nano.tcz
+#load nano
+tce-load -i /applications/nano/*
 
-tce-load -i /applications/openssh.tcz
+#load ssh
+tce-load -i /applications/ssh/*
 sudo cp /usr/local/etc/ssh/ssh_config.orig /usr/local/etc/ssh/ssh_config
 sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
 sudo /usr/local/etc/init.d/openssh start
 
+#load java
 tce-load -i /applications/java/*
 alias java="/usr/local/openjdk-8/jre/bin/java"
-
 
 --  END  --
