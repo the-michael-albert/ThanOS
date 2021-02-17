@@ -1,5 +1,6 @@
 package com.company;
 
+import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TerminalSize;
 import com.googlecode.lanterna.gui2.*;
 
@@ -11,7 +12,8 @@ public class WelcomeWindow extends BasicWindow {
 
     public WelcomeWindow() {
         super("Welcome");
-        super.setFixedSize(new TerminalSize(Main.w - 5, Main.h - 5));
+        super.setFixedSize(new TerminalSize(Main.w - 5, 3));
+        this.setPosition(new TerminalPosition(0, 3));
 
         init();
     }
@@ -25,7 +27,7 @@ public class WelcomeWindow extends BasicWindow {
         leftPanel.addComponent(new Label(""));
         leftPanel.addComponent(new Label("Welcome to Than-OS!"));
 
-        TextBox command = new TextBox("Which stone do you want to use?");
+        TextBox command = new TextBox(new TerminalSize(15,1));
 
         Label commandOutput = new Label("");
 
@@ -53,9 +55,11 @@ public class WelcomeWindow extends BasicWindow {
         leftPanel.addComponent(new Label(""));
         leftPanel.addComponent(commandOutput);
 
-
-
         // This ultimately links in the panels as the window content
         setComponent(horizontalPanel);
+    }
+    public void close(){
+        super.close();
+        System.exit(0);
     }
 }

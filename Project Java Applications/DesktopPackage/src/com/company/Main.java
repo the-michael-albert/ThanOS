@@ -1,5 +1,6 @@
 package com.company;
 
+import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.gui2.MultiWindowTextGUI;
 import com.googlecode.lanterna.gui2.WindowBasedTextGUI;
 import com.googlecode.lanterna.screen.Screen;
@@ -18,6 +19,9 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Terminal term = new DefaultTerminalFactory().createTerminal();
+        term.resetColorAndSGR();
+        term.setBackgroundColor(TextColor.ANSI.RED_BRIGHT);
+
         Screen screen = new TerminalScreen(term);
         h = term.getTerminalSize().getRows();
         w = term.getTerminalSize().getColumns();

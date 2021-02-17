@@ -25,6 +25,10 @@ alias rm='rm -i'
 
 alias ce='cd /etc/sysconfig/tcedir'
 
+echo "Set Password"
+sudo passwd tc
+
+
 #load nano
 tce-load -i /applications/nano/*
 
@@ -38,7 +42,7 @@ sudo /usr/local/etc/init.d/openssh start
 tce-load -i /applications/java/*
 alias java="/usr/local/openjdk-8/jre/bin/java"
 
-#java -jar /applications/jars/Desktop.jar
+java -jar /applications/jars/Main.jar
 
 #install python (yuck)
 tce-load -i /applications/python3.6/*
@@ -46,6 +50,5 @@ tce-load -i /applications/python3.6/*
 #install dedicated graphics firmware and monitor-sensing firmware
 tce-load -i /applications/graphics-all/*
 
-echo "Set Password"
-sudo passwd tc
+
 

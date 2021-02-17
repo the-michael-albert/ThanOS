@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaWindowManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaWindowManager_jar</output-path>
+    <root id="archive" name="JavaWindowManager.jar">
+      <element id="module-output" name="JavaWindowManager" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../dependencies/jexer-0.3.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
